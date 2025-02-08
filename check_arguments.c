@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:13:38 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/05 19:23:53 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/06 12:02:13 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,10 +82,7 @@ char	**concatinate_args(int ac, char **av)
 	while (++i < ac)
 	{
 		if (is_empty_str(av[i]))
-		{
-			write(2, "Error\n", 7);
-			exit(1);
-		}
+			print_error(NULL, 1);
 	}
 	i = 0;
 	res = ft_strdup("");
@@ -97,12 +94,6 @@ char	**concatinate_args(int ac, char **av)
 		free(tmp);
 		if (!res)
 			return (NULL);
-	}
-	if (is_empty_str(res))
-	{
-		free(res);
-		write(2, "Error\n", 7);
-		exit(1);
 	}
 	argv = ft_split(res, ' ');
 	free(res);
@@ -120,18 +111,14 @@ int	check_arguments(int ac, char **av)
 	{
 		if (!is_valid_nbr(av[i]))
 		{
-			write(2, "Error\n", 7);
-			if (ac == 2)
-				ft_free_split(av);
+			print_error(av, ac == 2);
 			return (0);
 		}
 		i++;
 	}
 	if (check_doubles(av))
 	{
-		write(2, "Error\n", 7);
-		if (ac == 2)
-			ft_free_split(av);
+		print_error(av, ac == 2);
 		return (0);
 	}
 	return (1);
