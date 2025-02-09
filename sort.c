@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
 #include "./libft/libft.h"
+#include "push_swap.h"
 
 // static int len_stack(t_stack_node *stack)
 // {
 //     int i;
-    
+
 //     i = 0;
 //     while(stack)
 //     {
@@ -26,11 +26,9 @@
 //     return(i);
 // }
 
-
-
 // void swap_three(t_stack_node *stack)
 // {
-//     if 
+//     if
 // }
 
 // void sort_stack(t_stack_node *stack)

@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:13:45 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/08 17:09:09 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/09 11:23:10 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,8 @@ int	main(int ac, char **av)
 	char			**argv;
 	int				i;
 
-	// atexit(f);
+	atexit(f);
 	argv = NULL;
-	i = 0;
 	a = NULL;
 	b = NULL;
 	if (ac == 1)
@@ -66,22 +65,9 @@ int	main(int ac, char **av)
 		exit(0);
 	}
 	else
-		printf("Avant rra:\n");
-		print_stack(a);
-
 		rra(&a);
-
-		printf("Après rra :\n");
-		print_stack(a);
-
-		free_stack(&a);
-		printf("Stack libérée !\n");
-	// printf("stack a :\n");
-	// print_stack(a);
-	// free_stack(&a);
-	// ft_free_split(argv);
+	print_stack(a);
+	free_stack(&a);
+	ft_free_split(argv);
 	return (0);
 }
-
-// 2147483647
-// -2147483648

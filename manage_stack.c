@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 10:53:04 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/08 16:25:43 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/09 11:24:42 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ static t_stack_node	*stack_new(int value)
 		return (NULL);
 	new_node->value = value;
 	new_node->next = NULL;
+	new_node->prev = NULL;
 	return (new_node);
 }
 
@@ -40,6 +41,7 @@ static void	stack_add_back(t_stack_node **stack, t_stack_node *new_node)
 	while (tmp->next)
 		tmp = tmp->next;
 	tmp->next = new_node;
+	new_node->prev = tmp;
 }
 
 t_stack_node	*init_stack(char **av)
@@ -76,20 +78,11 @@ void	free_stack(t_stack_node **stack)
 	*stack = NULL;
 }
 
-void print_stack(t_stack_node *stack)
+void	print_stack(t_stack_node *stack)
 {
-    int count = 0; // Compteur de sécurité
-    while (stack)
-    {
-        printf("%d\n", stack->value);
-        stack = stack->next;
-        
-        count++;
-        if (count > 100) // Si on dépasse 100 éléments, il y a une boucle infinie
-        {
-            printf("⚠ Boucle infinie détectée !\n");
-            break;
-        }
-    }
+	while (stack)
+	{
+		printf("%d\n", stack->value);
+		stack = stack->next;
+	}
 }
-
