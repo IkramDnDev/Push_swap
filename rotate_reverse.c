@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 20:07:09 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/09 11:22:10 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/09 15:02:54 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	rotate_reverse(t_stack_node **stack)
 	t_stack_node	*first;
 	t_stack_node	*new_last;
 
+	if (!stack || !*stack)
+		return ;
 	first = *stack;
 	last = *stack;
 	while (last->next)

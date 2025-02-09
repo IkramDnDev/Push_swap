@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:13:45 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/09 11:23:10 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/09 16:32:22 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,13 @@ int	main(int ac, char **av)
 	t_stack_node	*a;
 	t_stack_node	*b;
 	char			**argv;
-	int				i;
 
-	atexit(f);
+	// atexit(f);
 	argv = NULL;
 	a = NULL;
 	b = NULL;
 	if (ac == 1)
-		return (1);
+		return (0);
 	if (ac == 2 && !av[1][0])
 		print_error(NULL, 1);
 	else
@@ -58,14 +57,7 @@ int	main(int ac, char **av)
 	if (!check_arguments(ac, argv))
 		return (1);
 	a = init_stack(argv);
-	if (is_sorted(a))
-	{
-		write(1, "stack is sorted !\n", 19);
-		free_stack(&a);
-		exit(0);
-	}
-	else
-		rra(&a);
+	sort_stack(&a);
 	print_stack(a);
 	free_stack(&a);
 	ft_free_split(argv);

@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:35:33 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/09 11:22:03 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/09 15:02:18 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	rotate(t_stack_node **stack)
 	t_stack_node	*first;
 	t_stack_node	*last;
 
+	if (!stack || !*stack)
+		return ;
 	first = *stack;
 	*stack = first->next;
 	(*stack)->prev = NULL;

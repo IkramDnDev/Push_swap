@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:35:40 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/09 11:22:24 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/09 16:27:09 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	swap(t_stack_node **stack)
 	t_stack_node	*first;
 	t_stack_node	*second;
 
+	if (!stack || !*stack)
+		return ;
 	first = *stack;
 	second = first->next;
 	if (second->next)

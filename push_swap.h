@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:13:50 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/08 16:16:14 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/09 16:03:44 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,21 @@ typedef struct s_stack_node
 	struct s_stack_node	*next;
 }						t_stack_node;
 
-int						check_arguments(int ac, char **av);
 long					ft_atol(const char *str);
+
 t_stack_node			*init_stack(char **av);
+
 void					print_stack(t_stack_node *stack);
 void					ft_free_split(char **split);
 void					free_stack(t_stack_node **stack);
-char					**concatinate_args(int ac, char **av);
 void					print_error(char **av, int free_av);
+void					sort_stack(t_stack_node **stack);
+
+char					**concatinate_args(int ac, char **av);
+
 int						is_sorted(t_stack_node *stack);
+int						len_stack(t_stack_node *stack);
+int						check_arguments(int ac, char **av);
 // swap
 void					sa(t_stack_node **a);
 void					sb(t_stack_node **b);
