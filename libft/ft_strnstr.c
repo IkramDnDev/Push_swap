@@ -25,8 +25,8 @@ char	*ft_strnstr(const char *str, const char *subs, size_t n)
 		if (str[i] == subs[0])
 		{
 			j = 0;
-			while (str[i + j] && subs[j]
-				&& str[i + j] == subs[j] && (i + j) < n)
+			while (str[i + j] && subs[j] && str[i + j] == subs[j] && (i
+					+ j) < n)
 				j++;
 			if (subs[j] == '\0')
 				return ((char *)(str + i));

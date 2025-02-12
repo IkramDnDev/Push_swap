@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:05:22 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/12 21:16:38 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/12 18:04:54 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,15 @@ static int	ft_overflow(int sign)
 	return (0);
 }
 
+static void	error(int res)
+{
+	if (res > INT_MAX)
+	{
+		write(1, "Error\n", 6);
+		exit(1);
+	}
+}
+
 int	ft_atoi(const char *str)
 {
 	long	res;
@@ -28,8 +37,8 @@ int	ft_atoi(const char *str)
 	res = 0;
 	sign = 1;
 	i = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\f'
-		|| str[i] == '\v' || str[i] == '\r' || str[i] == '\n')
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\f' || str[i] == '\v'
+		|| str[i] == '\r' || str[i] == '\n')
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
@@ -42,6 +51,7 @@ int	ft_atoi(const char *str)
 		if (res > (LONG_MAX - (str[i] - '0')) / 10)
 			return (ft_overflow(sign));
 		res = res * 10 + (str[i] - '0');
+		error(res);
 		i++;
 	}
 	return (res * sign);

@@ -6,7 +6,7 @@
 #    By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/04 16:13:56 by idahhan           #+#    #+#              #
-#    Updated: 2025/02/09 15:54:44 by idahhan          ###   ########.fr        #
+#    Updated: 2025/02/12 18:20:59 by idahhan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,11 @@ CFLAGS = -Wall -Wextra -Werror
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SRCS = push_swap.c check_arguments.c ft_atol.c manage_stack.c swap.c rotate.c push.c rotate_reverse.c sort.c
+SRCS = push_swap.c check_arguments.c stack_utils.c swap.c rotate.c push.c rotate_reverse.c sort.c swap_three.c concatinate.c init_stack.c sort_more.c
 OBJS = $(SRCS:%.c=%.o)
 
 HEADER = push_swap.h ./libft/libft.h
+
 
 all : $(NAME)
 
@@ -30,16 +31,16 @@ $(NAME): $(OBJS) $(LIBFT)
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(LIBFT):
-	make -C $(LIBFT_DIR)
+$(LIBFT): $(LIBFT_DIR)/*.c
+	@make -C $(LIBFT_DIR)
 
 clean:
 	rm -f *.o
-	make -C $(LIBFT_DIR) clean
+	@make -C $(LIBFT_DIR) clean
 
 fclean: clean
 	rm -f $(NAME)
-	make -C $(LIBFT_DIR) fclean
+	@make -C $(LIBFT_DIR) fclean
 
 re: fclean all
 
