@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:13:38 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/12 17:38:50 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/13 17:22:46 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ static int	check_doubles(char **av)
 	int	i;
 	int	j;
 
+	if (!av)
+		return (0);
 	i = 0;
 	while (av[i])
 	{
@@ -96,9 +98,9 @@ int	check_arguments(int ac, char **av)
 {
 	int	i;
 
-	i = 0;
 	if (!av)
 		write(2, "Error\n", 7);
+	i = 0;
 	while (av[i])
 	{
 		if (!is_valid_nbr(av[i]))

@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 17:33:48 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/12 17:57:16 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/13 17:36:21 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,17 @@ int	len_stack(t_stack_node *stack)
 		stack = stack->next;
 	}
 	return (i);
+}
+
+t_stack_node	*return_cheapest(t_stack_node *b)
+{
+	if (!b)
+		return (NULL);
+	while (b)
+	{
+		if (b->cheapest)
+			return (b);
+		b = b->next;
+	}
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 #    By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/04 16:13:56 by idahhan           #+#    #+#              #
-#    Updated: 2025/02/12 18:20:59 by idahhan          ###   ########.fr        #
+#    Updated: 2025/02/13 12:20:50 by idahhan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CFLAGS = -Wall -Wextra -Werror
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SRCS = push_swap.c check_arguments.c stack_utils.c swap.c rotate.c push.c rotate_reverse.c sort.c swap_three.c concatinate.c init_stack.c sort_more.c
+SRCS = push_swap.c check_arguments.c stack_utils.c swap.c rotate.c push.c rotate_reverse.c sort.c swap_three.c concatinate.c init_stack.c push_swap_utils.c
 OBJS = $(SRCS:%.c=%.o)
 
 HEADER = push_swap.h ./libft/libft.h
