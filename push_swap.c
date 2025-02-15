@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 12:48:27 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/15 16:41:50 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/15 16:47:10 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ static void	move_nodes(t_stack_node **a, t_stack_node **b)
 
 void	push_swap(t_stack_node **a, t_stack_node **b)
 {
-	int             len_a;
-	t_stack_node    *min;
+	int				len_a;
+	t_stack_node	*min;
 
 	len_a = len_stack(*a);
 	while (len_a-- > 3)

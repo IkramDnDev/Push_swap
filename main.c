@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:13:45 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/15 16:42:09 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/15 17:31:19 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,18 @@ void	ft_free_split(char **split)
 	free(split);
 }
 
+void	f(void)
+{
+	system("leaks push_swap");
+}
+
 int	main(int ac, char **av)
 {
 	t_stack_node	*a;
 	t_stack_node	*b;
 	char			**argv;
 
+	atexit(f);
 	argv = NULL;
 	a = NULL;
 	b = NULL;

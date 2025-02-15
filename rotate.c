@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:35:33 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/15 15:56:01 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/15 17:24:03 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,24 +29,23 @@ void	rotate(t_stack_node **stack)
 	last->next = first;
 	first->prev = last;
 	first->next = NULL;
-	// set_current_pos(*stack);
 }
 
 void	ra(t_stack_node **a)
 {
 	rotate(a);
-	write(1, "ra\n", 4);
+	write(1, "ra\n", 3);
 }
 
 void	rb(t_stack_node **b)
 {
 	rotate(b);
-	write(1, "rb\n", 4);
+	write(1, "rb\n", 3);
 }
 
 void	rr(t_stack_node **a, t_stack_node **b)
 {
 	rotate(a);
 	rotate(b);
-	write(1, "rr\n", 4);
+	write(1, "rr\n", 3);
 }
