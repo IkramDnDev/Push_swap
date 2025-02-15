@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:35:40 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/09 16:27:09 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/15 15:56:04 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	swap(t_stack_node **stack)
 	second->prev = NULL;
 	first->prev = second;
 	*stack = second;
+	// set_current_pos(*stack);
 }
 
 void	sa(t_stack_node **a)

@@ -6,30 +6,30 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 11:56:47 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/12 17:43:06 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/15 14:51:44 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
 #include "push_swap.h"
 
-void	sort_stack(t_stack_node **stack)
+void	sort_stack(t_stack_node **a, t_stack_node **b)
 {
 	int	len;
 
-	if (is_sorted(*stack))
+	if (is_sorted(*a))
 	{
-		write(1, "stack is sorted !\n", 19);
-		free_stack(stack);
+		write(1, "a is sorted !\n", 15);
+		free_stack(a);
 		exit(0);
 	}
-	len = len_stack(*stack);
+	len = len_stack(*a);
 	if (len == 2)
-	{
-		sa(stack);
-	}
+		sa(a);
 	else if (len == 3)
-		swap_three(stack);
+		swap_three(a);
 	else
-		printf("number of argument is more than 3\n");
+	{
+		push_swap(a, b);
+	}
 }

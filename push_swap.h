@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:13:50 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/13 15:44:04 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/15 13:25:48 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void					print_stack(t_stack_node *stack);
 void					ft_free_split(char **split);
 void					free_stack(t_stack_node **stack);
 void					print_error(char **av, int free_av);
-void					sort_stack(t_stack_node **stack);
+void					sort_stack(t_stack_node **a, t_stack_node **b);
 void					swap_three(t_stack_node **stack);
 void					set_target_node(t_stack_node *a, t_stack_node *b);
 void					set_current_pos(t_stack_node *stack);
@@ -47,6 +47,7 @@ void					set_price(t_stack_node *a, t_stack_node *b);
 void					set_cheapest(t_stack_node *b);
 void					set_target_node(t_stack_node *a, t_stack_node *b);
 void					init_nodes(t_stack_node *a, t_stack_node *b);
+void					push_swap(t_stack_node **a, t_stack_node **b);
 
 char					**concatinate_args(int ac, char **av);
 

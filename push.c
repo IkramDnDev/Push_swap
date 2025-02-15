@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 17:24:23 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/09 14:51:07 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/15 15:55:55 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void	push(t_stack_node **src, t_stack_node **dest)
 	if (*dest)
 		(*dest)->prev = top;
 	*dest = top;
+	// set_current_pos(*src);
+	// set_current_pos(*dest);
 }
 
 void	pa(t_stack_node **a, t_stack_node **b)
