@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 17:46:28 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/15 16:29:08 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/18 15:46:40 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,26 +31,6 @@ void	set_current_pos(t_stack_node *stack)
 			stack->above_median = false;
 		stack = stack->next;
 		++i;
-	}
-}
-
-void	set_price(t_stack_node *a, t_stack_node *b)
-{
-	int	a_len;
-	int	b_len;
-
-	a_len = len_stack(a);
-	b_len = len_stack(b);
-	while (b)
-	{
-		b->push_price = b->current_position;
-		if (!(b->above_median))
-			b->push_price = b_len - (b->current_position);
-		if (b->target_node->above_median)
-			b->push_price += b->target_node->current_position;
-		else
-			b->push_price += a_len - (b->target_node->current_position);
-		b = b->next;
 	}
 }
 
