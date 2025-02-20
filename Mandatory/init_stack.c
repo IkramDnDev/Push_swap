@@ -6,11 +6,11 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 17:39:29 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/13 11:41:29 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/18 16:52:52 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
+#include "../libft/libft.h"
 #include "push_swap.h"
 
 static t_stack_node	*stack_new(int value)

@@ -6,11 +6,11 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:13:45 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/18 15:53:30 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/20 12:25:08 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
+#include "../libft/libft.h"
 #include "push_swap.h"
 
 void	print_error(char **av, int free_av)
@@ -52,6 +52,7 @@ int	main(int ac, char **av)
 		return (1);
 	a = init_stack(argv);
 	sort_stack(&a, &b);
+	// print_stack(a);
 	free_stack(&a);
 	ft_free_split(argv);
 	return (0);

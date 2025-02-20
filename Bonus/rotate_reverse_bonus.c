@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_reverse.c                                   :+:      :+:    :+:   */
+/*   rotate_reverse_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 20:07:09 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/15 17:24:29 by idahhan          ###   ########.fr       */
+/*   Created: 2025/02/20 10:44:47 by idahhan           #+#    #+#             */
+/*   Updated: 2025/02/20 16:21:36 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
-#include "push_swap.h"
+#include "../libft/libft.h"
+#include "checker.h"
 
 void	rotate_reverse(t_stack_node **stack)
 {
@@ -33,21 +33,27 @@ void	rotate_reverse(t_stack_node **stack)
 	*stack = last;
 }
 
-void	rra(t_stack_node **a)
+void	rra(t_stack_node **a, bool checker)
 {
 	rotate_reverse(a);
-	write(1, "rra\n", 4);
+	if (!checker)
+		write(1, "rra\n", 4);
+	printf("---------\n");
 }
 
-void	rrb(t_stack_node **b)
+void	rrb(t_stack_node **b, bool checker)
 {
 	rotate_reverse(b);
-	write(1, "rrb\n", 4);
+	if (!checker)
+		write(1, "rrb\n", 4);
+	printf("---------\n");
 }
 
-void	rrr(t_stack_node **a, t_stack_node **b)
+void	rrr(t_stack_node **a, t_stack_node **b, bool checker)
 {
 	rotate_reverse(a);
 	rotate_reverse(b);
-	write(1, "rrr\n", 4);
+	if (!checker)
+		write(1, "rrr\n", 4);
+	printf("---------\n");
 }

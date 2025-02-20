@@ -6,11 +6,11 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:13:38 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/13 17:22:46 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/18 16:52:41 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
+#include "../libft/libft.h"
 #include "push_swap.h"
 
 static int	ft_overflow(int sign)

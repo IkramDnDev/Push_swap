@@ -6,11 +6,11 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 17:33:48 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/13 17:36:21 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/20 11:03:20 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
+#include "../libft/libft.h"
 #include "push_swap.h"
 
 void	free_stack(t_stack_node **stack)
@@ -86,4 +86,17 @@ t_stack_node	*return_cheapest(t_stack_node *b)
 		b = b->next;
 	}
 	return (NULL);
+}
+
+int	is_sorted(t_stack_node *stack)
+{
+	if (!stack)
+		return (1);
+	while (stack->next)
+	{
+		if (stack->value > stack->next->value)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
 }

@@ -6,11 +6,11 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 17:42:56 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/12 17:45:23 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/18 16:53:17 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
+#include "../libft/libft.h"
 #include "push_swap.h"
 
 static t_stack_node	*find_max_node(t_stack_node *stack)

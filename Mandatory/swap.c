@@ -6,25 +6,12 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:35:40 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/15 17:23:52 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/20 11:02:38 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
+#include "../libft/libft.h"
 #include "push_swap.h"
-
-int	is_sorted(t_stack_node *stack)
-{
-	if (!stack)
-		return (1);
-	while (stack->next)
-	{
-		if (stack->value > stack->next->value)
-			return (0);
-		stack = stack->next;
-	}
-	return (1);
-}
 
 void	swap(t_stack_node **stack)
 {

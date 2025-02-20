@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   concatinate.c                                      :+:      :+:    :+:   */
+/*   concatinate_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/12 17:37:31 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/12 18:27:30 by idahhan          ###   ########.fr       */
+/*   Created: 2025/02/18 17:32:38 by idahhan           #+#    #+#             */
+/*   Updated: 2025/02/18 17:46:34 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
-#include "push_swap.h"
+#include "../libft/libft.h"
+#include "checker.h"
 
 static int	is_empty_str(const char *str)
 {

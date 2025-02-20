@@ -6,11 +6,11 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 12:48:27 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/15 16:47:10 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/20 12:10:44 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
+#include "../libft/libft.h"
 #include "push_swap.h"
 
 static void	rotate_both(t_stack_node **a, t_stack_node **b,
@@ -75,7 +75,7 @@ void	push_swap(t_stack_node **a, t_stack_node **b)
 
 	len_a = len_stack(*a);
 	while (len_a-- > 3)
-		pb(b, a);
+		pb(a, b);
 	swap_three(a);
 	while (*b)
 	{

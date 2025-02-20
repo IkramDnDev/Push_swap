@@ -6,11 +6,11 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 15:38:17 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/18 15:47:29 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/18 16:53:09 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
+#include "../libft/libft.h"
 #include "push_swap.h"
 
 static void	above_median(t_stack_node **b)

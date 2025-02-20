@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:13:50 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/15 13:25:48 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/18 17:04:58 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,5 @@ void					pb(t_stack_node **b, t_stack_node **a);
 void					rra(t_stack_node **a);
 void					rrb(t_stack_node **b);
 void					rrr(t_stack_node **a, t_stack_node **b);
+
 #endif
