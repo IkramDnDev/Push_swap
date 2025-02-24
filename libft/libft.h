@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 21:29:09 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/18 17:09:59 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/24 16:39:29 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,18 +58,9 @@ void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
-void				ft_lstadd_front(t_list **lst, t_list *new);
-void				ft_lstadd_back(t_list **lst, t_list *new);
-void				ft_lstdelone(t_list *lst, void (*del)(void *));
-void				ft_lstclear(t_list **lst, void (*del)(void *));
-void				ft_lstiter(t_list *lst, void (*f)(void *));
 
 size_t				ft_strlcat(char *dest, const char *src, unsigned int size);
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcpy(char *dest, const char *src, size_t size);
 
-t_list				*ft_lstnew(void *content);
-t_list				*ft_lstlast(t_list *lst);
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-						void (*del)(void *));
 #endif

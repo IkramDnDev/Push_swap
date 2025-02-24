@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 10:44:47 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/20 16:21:36 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/24 11:36:24 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void	rra(t_stack_node **a, bool checker)
 	rotate_reverse(a);
 	if (!checker)
 		write(1, "rra\n", 4);
-	printf("---------\n");
 }
 
 void	rrb(t_stack_node **b, bool checker)
@@ -46,7 +45,6 @@ void	rrb(t_stack_node **b, bool checker)
 	rotate_reverse(b);
 	if (!checker)
 		write(1, "rrb\n", 4);
-	printf("---------\n");
 }
 
 void	rrr(t_stack_node **a, t_stack_node **b, bool checker)
@@ -55,5 +53,4 @@ void	rrr(t_stack_node **a, t_stack_node **b, bool checker)
 	rotate_reverse(b);
 	if (!checker)
 		write(1, "rrr\n", 4);
-	printf("---------\n");
 }

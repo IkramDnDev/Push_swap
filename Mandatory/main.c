@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:13:45 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/20 12:25:08 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/24 16:27:27 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,12 @@ int	main(int ac, char **av)
 		print_error(NULL, 1);
 	else
 		argv = concatinate_args(ac, av);
+	if (!argv)
+		return (0);
 	if (!check_arguments(ac, argv))
 		return (1);
 	a = init_stack(argv);
 	sort_stack(&a, &b);
-	// print_stack(a);
 	free_stack(&a);
 	ft_free_split(argv);
 	return (0);

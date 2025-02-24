@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 10:44:06 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/20 15:43:22 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/24 11:36:07 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ void	sa(t_stack_node **a, bool checker)
 	swap(a);
 	if (!checker)
 		write(1, "sa\n", 3);
-	printf("---------\n");
 }
 
 void	sb(t_stack_node **b, bool checker)
@@ -44,7 +43,6 @@ void	sb(t_stack_node **b, bool checker)
 	swap(b);
 	if (!checker)
 		write(1, "sb\n", 3);
-	printf("---------\n");
 }
 
 void	ss(t_stack_node **a, t_stack_node **b, bool checker)
@@ -53,5 +51,4 @@ void	ss(t_stack_node **a, t_stack_node **b, bool checker)
 	swap(b);
 	if (!checker)
 		write(1, "ss\n", 3);
-	printf("---------\n");
 }

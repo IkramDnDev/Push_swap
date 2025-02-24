@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 10:47:42 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/20 15:43:45 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/24 11:36:41 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void	pa(t_stack_node **b, t_stack_node **a, bool checker)
 	push(b, a);
 	if (!checker)
 		write(1, "pa\n", 3);
-	printf("---------\n");
 }
 
 void	pb(t_stack_node **a, t_stack_node **b, bool checker)
@@ -42,5 +41,4 @@ void	pb(t_stack_node **a, t_stack_node **b, bool checker)
 	push(a, b);
 	if (!checker)
 		write(1, "pb\n", 3);
-	printf("---------\n");
 }

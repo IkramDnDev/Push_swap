@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 11:25:32 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/20 16:21:07 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/24 12:10:00 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ static char	*read_instructions(void)
 	line = get_next_line(0);
 	while (line)
 	{
-		// printf("Instruction lue : '%s'\n", line);
 		tmp = instructions;
 		instructions = ft_strjoin(tmp, line);
 		free(tmp);
@@ -42,50 +41,38 @@ static char	*read_instructions(void)
 			return (NULL);
 		line = get_next_line(0);
 	}
-	// printf("Instructions finales reçues : '%s'\n", instructions);
 	return (instructions);
 }
 
-
-static int	execute_instructions(t_stack_node **a, t_stack_node **b, char *instr)
+static int	execute_instructions(t_stack_node **a, t_stack_node **b,
+		char *instr)
 {
-	// printf("🔹 Avant l'exécution :\n");
-	// print_stack(*a);
-    // printf("-------\n");
-	// print_stack(*b);
-	// printf("➡️  Exécution : %s\n", instr);
-
-	if (!ft_strncmp(instr, "sa", ft_strlen("sa")))
+	if (!ft_strncmp(instr, "sa", ft_strlen(instr)))
 		sa(a, true);
-	else if (!ft_strncmp(instr, "sb", ft_strlen("sb")))
+	else if (!ft_strncmp(instr, "sb", ft_strlen(instr)))
 		sb(b, true);
-	else if (!ft_strncmp(instr, "ss", ft_strlen("ss")))
+	else if (!ft_strncmp(instr, "ss", ft_strlen(instr)))
 		ss(a, b, true);
-	else if (!ft_strncmp(instr, "ra", ft_strlen("ra")))
+	else if (!ft_strncmp(instr, "ra", ft_strlen(instr)))
 		ra(a, true);
-	else if (!ft_strncmp(instr, "rb", ft_strlen("rb")))
+	else if (!ft_strncmp(instr, "rb", ft_strlen(instr)))
 		rb(b, true);
-	else if (!ft_strncmp(instr, "rr", ft_strlen("rr")))
+	else if (!ft_strncmp(instr, "rr", ft_strlen(instr)))
 		rr(a, b, true);
-	else if (!ft_strncmp(instr, "rra", ft_strlen("rra")))
+	else if (!ft_strncmp(instr, "rra", ft_strlen(instr)))
 		rra(a, true);
-	else if (!ft_strncmp(instr, "rrb", ft_strlen("rrb")))
+	else if (!ft_strncmp(instr, "rrb", ft_strlen(instr)))
 		rrb(b, true);
-	else if (!ft_strncmp(instr, "rrr", ft_strlen("rrr")))
+	else if (!ft_strncmp(instr, "rrr", ft_strlen(instr)))
 		rrr(a, b, true);
-	else if (!ft_strncmp(instr, "pa", ft_strlen("pa")))
+	else if (!ft_strncmp(instr, "pa", ft_strlen(instr)))
 		pa(b, a, true);
-	else if (!ft_strncmp(instr, "pb", ft_strlen("pb")))
+	else if (!ft_strncmp(instr, "pb", ft_strlen(instr)))
 		pb(a, b, true);
 	else
 		return (0);
-	// printf("✅ Après l'exécution :\n");
-	// print_stack(*a);
-    // printf("-------\n");
-	// print_stack(*b);
 	return (1);
 }
-
 
 void	read_execute(t_stack_node **a, t_stack_node **b)
 {

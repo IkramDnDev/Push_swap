@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 17:33:48 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/20 11:03:20 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/24 11:34:55 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,6 @@ void	free_stack(t_stack_node **stack)
 		free(tmp);
 	}
 	*stack = NULL;
-}
-
-void	print_stack(t_stack_node *stack)
-{
-	while (stack)
-	{
-		printf("%d\n", stack->value);
-		stack = stack->next;
-	}
 }
 
 t_stack_node	*find_min(t_stack_node *stack)

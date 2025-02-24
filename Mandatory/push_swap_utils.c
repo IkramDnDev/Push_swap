@@ -6,14 +6,14 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 17:46:28 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/18 16:52:57 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/24 16:12:32 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
 #include "push_swap.h"
 
-void	set_current_pos(t_stack_node *stack)
+void	set_pos(t_stack_node *stack)
 {
 	int	i;
 	int	median;
@@ -84,8 +84,8 @@ void	set_target_node(t_stack_node *a, t_stack_node *b)
 
 void	init_nodes(t_stack_node *a, t_stack_node *b)
 {
-	set_current_pos(a);
-	set_current_pos(b);
+	set_pos(a);
+	set_pos(b);
 	set_target_node(a, b);
 	set_price(a, b);
 	set_cheapest(b);
