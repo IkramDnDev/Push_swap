@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 11:25:32 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/24 12:10:00 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/24 17:00:08 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,27 +48,27 @@ static int	execute_instructions(t_stack_node **a, t_stack_node **b,
 		char *instr)
 {
 	if (!ft_strncmp(instr, "sa", ft_strlen(instr)))
-		sa(a, true);
+		sa(a);
 	else if (!ft_strncmp(instr, "sb", ft_strlen(instr)))
-		sb(b, true);
+		sb(b);
 	else if (!ft_strncmp(instr, "ss", ft_strlen(instr)))
-		ss(a, b, true);
+		ss(a, b);
 	else if (!ft_strncmp(instr, "ra", ft_strlen(instr)))
-		ra(a, true);
+		ra(a);
 	else if (!ft_strncmp(instr, "rb", ft_strlen(instr)))
-		rb(b, true);
+		rb(b);
 	else if (!ft_strncmp(instr, "rr", ft_strlen(instr)))
-		rr(a, b, true);
+		rr(a, b);
 	else if (!ft_strncmp(instr, "rra", ft_strlen(instr)))
-		rra(a, true);
+		rra(a);
 	else if (!ft_strncmp(instr, "rrb", ft_strlen(instr)))
-		rrb(b, true);
+		rrb(b);
 	else if (!ft_strncmp(instr, "rrr", ft_strlen(instr)))
-		rrr(a, b, true);
+		rrr(a, b);
 	else if (!ft_strncmp(instr, "pa", ft_strlen(instr)))
-		pa(b, a, true);
+		pa(b, a);
 	else if (!ft_strncmp(instr, "pb", ft_strlen(instr)))
-		pb(a, b, true);
+		pb(a, b);
 	else
 		return (0);
 	return (1);

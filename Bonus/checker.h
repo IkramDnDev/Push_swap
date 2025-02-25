@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 17:05:55 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/24 16:36:14 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/24 17:00:25 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,19 +43,19 @@ void					check_result(t_stack_node *a, t_stack_node *b);
 void					read_execute(t_stack_node **a, t_stack_node **b);
 
 // swap
-void					sa(t_stack_node **a, bool checker);
-void					sb(t_stack_node **b, bool checker);
-void					ss(t_stack_node **a, t_stack_node **b, bool checker);
+void					sa(t_stack_node **a);
+void					sb(t_stack_node **b);
+void					ss(t_stack_node **a, t_stack_node **b);
 // rotate
-void					ra(t_stack_node **a, bool checker);
-void					rb(t_stack_node **b, bool checker);
-void					rr(t_stack_node **a, t_stack_node **b, bool checker);
+void					ra(t_stack_node **a);
+void					rb(t_stack_node **b);
+void					rr(t_stack_node **a, t_stack_node **b);
 // push
-void					pa(t_stack_node **a, t_stack_node **b, bool checker);
-void					pb(t_stack_node **b, t_stack_node **a, bool checker);
+void					pa(t_stack_node **a, t_stack_node **b);
+void					pb(t_stack_node **b, t_stack_node **a);
 // rotate_reverse
-void					rra(t_stack_node **a, bool checker);
-void					rrb(t_stack_node **b, bool checker);
-void					rrr(t_stack_node **a, t_stack_node **b, bool checker);
+void					rra(t_stack_node **a);
+void					rrb(t_stack_node **b);
+void					rrr(t_stack_node **a, t_stack_node **b);
 
 #endif

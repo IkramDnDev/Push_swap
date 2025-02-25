@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 10:44:06 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/24 11:36:07 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/24 16:58:57 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,24 +31,18 @@ void	swap(t_stack_node **stack)
 	*stack = second;
 }
 
-void	sa(t_stack_node **a, bool checker)
+void	sa(t_stack_node **a)
 {
 	swap(a);
-	if (!checker)
-		write(1, "sa\n", 3);
 }
 
-void	sb(t_stack_node **b, bool checker)
+void	sb(t_stack_node **b)
 {
 	swap(b);
-	if (!checker)
-		write(1, "sb\n", 3);
 }
 
-void	ss(t_stack_node **a, t_stack_node **b, bool checker)
+void	ss(t_stack_node **a, t_stack_node **b)
 {
 	swap(a);
 	swap(b);
-	if (!checker)
-		write(1, "ss\n", 3);
 }

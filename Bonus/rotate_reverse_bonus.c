@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 10:44:47 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/24 11:36:24 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/24 16:59:21 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,18 @@ void	rotate_reverse(t_stack_node **stack)
 	*stack = last;
 }
 
-void	rra(t_stack_node **a, bool checker)
+void	rra(t_stack_node **a)
 {
 	rotate_reverse(a);
-	if (!checker)
-		write(1, "rra\n", 4);
 }
 
-void	rrb(t_stack_node **b, bool checker)
+void	rrb(t_stack_node **b)
 {
 	rotate_reverse(b);
-	if (!checker)
-		write(1, "rrb\n", 4);
 }
 
-void	rrr(t_stack_node **a, t_stack_node **b, bool checker)
+void	rrr(t_stack_node **a, t_stack_node **b)
 {
 	rotate_reverse(a);
 	rotate_reverse(b);
-	if (!checker)
-		write(1, "rrr\n", 4);
 }
