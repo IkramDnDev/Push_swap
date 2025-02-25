@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 17:46:28 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/24 17:03:03 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/25 10:17:07 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,3 +90,4 @@ void	init_nodes(t_stack_node *a, t_stack_node *b)
 	set_price(a, b);
 	set_cheapest(b);
 }
+ 

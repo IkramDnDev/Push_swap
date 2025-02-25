@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 12:48:27 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/24 16:15:30 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/25 12:29:31 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,8 @@ void	push_swap(t_stack_node **a, t_stack_node **b)
 			ra(a);
 	}
 	else
+	{
 		while (*a != min)
 			rra(a);
+	}
 }

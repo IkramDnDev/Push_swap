@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 15:38:17 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/18 16:53:09 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/25 11:38:19 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,17 @@ static void	above_median(t_stack_node **b)
 
 static void	under_median(t_stack_node **b, int len_a, int len_b)
 {
-	int	inder_a;
-	int	inder_b;
+	int	under_a;
+	int	under_b;
 
-	if (!(*b)->above_median && !(*b)->target_node->above_median)
-	{
-		inder_a = len_a - (*b)->target_node->current_position;
-		inder_b = len_b - (*b)->current_position;
-		if (inder_b > inder_a)
-			(*b)->push_price = inder_a + (inder_b - inder_a);
-		else if (inder_b < inder_a)
-			(*b)->push_price = inder_b + (inder_a - inder_b);
-		else
-			(*b)->push_price = inder_b;
-	}
+	under_a = len_a - (*b)->target_node->current_position;
+	under_b = len_b - (*b)->current_position;
+	if (under_b > under_a)
+		(*b)->push_price = under_a + (under_b - under_a);
+	else if (under_b < under_a)
+		(*b)->push_price = under_b + (under_a - under_b);
+	else
+		(*b)->push_price = under_b;
 }
 
 void	set_price(t_stack_node *a, t_stack_node *b)
