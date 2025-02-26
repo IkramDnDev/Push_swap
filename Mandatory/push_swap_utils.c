@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 17:46:28 by idahhan           #+#    #+#             */
-/*   Updated: 2025/02/25 10:17:07 by idahhan          ###   ########.fr       */
+/*   Updated: 2025/02/26 10:48:52 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,23 +58,23 @@ void	set_target_node(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*target_node;
 	t_stack_node	*current_a;
-	long			best_match_index;
+	long			node;
 
 	while (b)
 	{
-		best_match_index = LONG_MAX;
+		node = LONG_MAX;
 		current_a = a;
 		while (current_a)
 		{
 			if (current_a->value > b->value
-				&& current_a->value < best_match_index)
+				&& current_a->value < node)
 			{
-				best_match_index = current_a->value;
+				node = current_a->value;
 				target_node = current_a;
 			}
 			current_a = current_a->next;
 		}
-		if (best_match_index == LONG_MAX)
+		if (node == LONG_MAX)
 			b->target_node = find_min(a);
 		else
 			b->target_node = target_node;
@@ -90,4 +90,3 @@ void	init_nodes(t_stack_node *a, t_stack_node *b)
 	set_price(a, b);
 	set_cheapest(b);
 }
- 
